@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/illucidate_logo.svg" alt="Illucidate Logo" width="400"/>
+  <img src="assets/illucidate_logo3.svg" alt="Illucidate Logo" width="400"/>
 </p>
 
 # Illucidate 💡
