@@ -1,4 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220">
+<defs>
+  <filter id="halo-filter" x="-200%" y="-200%" width="500%" height="500%">
+    <feFlood flood-color="#00D1FF" result="glow-color" />
+    <feComposite in="glow-color" in2="SourceGraphic" operator="in" result="colored-source" />
+    
+    <feMorphology operator="dilate" radius="2" in="colored-source" result="dilated" />
+    <feGaussianBlur stdDeviation="4" in="dilated" result="blurred" />
+    
+    <feMerge>
+      <feMergeNode in="blurred" />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+</defs>
 <style>
   :root {
     --ink: #111827;          /* light mode ink */
@@ -59,7 +73,7 @@
            L620 102"></path>
 
   <!-- EARLY DETECTION POINT -->
-  <circle class="accent halo" cx="150" cy="128" r="5"></circle>
+   <circle cx="140" cy="135" r="5" fill="#00D1FF" filter="url(#halo-filter)"></circle>
 
   <!-- WORDMARK -->
   <text x="360" y="135" font-size="58">Illucidate</text>

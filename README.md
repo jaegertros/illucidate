@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/illucidate_logo3.svg" alt="Illucidate Logo" width="400"/>
+  <img src="assets/illucidate_logo2.svg" alt="Illucidate Logo" width="400"/>
 </p>
 
 # Illucidate 💡
@@ -8,9 +8,56 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/jaegertros/illucidate)
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/cwaddell13)
 
 > *Illucidate* = **Illuminate** + **Elucidate**  
 > Because bacterial detection should be both *bright* and *clear*.
+
+---
+
+## 🚧 Project Status: Active Development
+
+**Current Version:** 0.1.0-alpha  
+**Last Updated: February 2026
+
+This toolkit is under active development as part of doctoral research at Purdue University. Core functionality is being built and validated.
+
+### ✅ What Works Now:
+- [x] Project structure and documentation
+- [x] Conceptual framework and methodology
+- [ ] Victor Nivo adapter (in progress)
+- [ ] Feature generation engine (in progress)
+- [ ] Statistical testing framework (planned)
+- [ ] Google Colab integration (planned)
+
+### 🎯 Roadmap:
+
+**Phase 1: Core Implementation** (Current)
+- Building Victor Nivo plate reader parser
+- Implementing feature generation (100+ features)
+- Statistical analysis framework
+- Initial validation on E. coli O157:H7 data
+
+**Phase 2: Validation & Documentation** (Next)
+- Analysis of published datasets
+- Comprehensive documentation
+- Example notebooks and tutorials
+- Performance benchmarking
+
+**Phase 3: Community Release** (Future)
+- Multiple plate reader adapters
+- Interactive Colab notebooks
+- Example datasets (with attribution)
+- Full API documentation
+
+### 📢 Looking For:
+- **Beta testers** with Victor Nivo, BioTek, or Tecan plate readers
+- **Collaborators** interested in early detection methods
+- **Datasets** for validation (with proper attribution)
+- **Feedback** on methodology and implementation
+
+**Interested?** Open an [issue](https://github.com/jaegertros/illucidate/issues) or reach out directly!
 
 ---
 
@@ -34,23 +81,33 @@ That's Illucidate—bringing the hidden signals to light.
 
 ---
 
+### Support the Synthesis
+
+Maintaining this level of cross-disciplinary research has a metabolic cost. If this toolkit helps your systems, feel free to fuel the next deep dive.
+
+<a href="https://buymeacoffee.com/cwaddell13"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cwaddell13&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff" width="180" /></a>
+
+---
+
 ## Quick Start
 
-### Installation
+**Note:** Installation instructions below reflect the planned final state. Core implementation is in progress.
+
+### Installation (Coming Soon)
 
 ```bash
 pip install illucidate
 ```
 
-Or clone and install from source:
+Or clone and follow development:
 
 ```bash
 git clone https://github.com/jaegertros/illucidate.git
 cd illucidate
-pip install -e .
+# Watch for updates!
 ```
 
-### Basic Usage
+### Planned Usage
 
 ```python
 from illucidate.adapters import VictorNivoAdapter
@@ -73,21 +130,11 @@ features = generator.generate_all()
 
 # Find early detection signals
 signals = find_early_signals(features, compare='phage')
-
-# Top signal might be:
-# "OD600_time_to_12x" - effect size: 31.5
-# With phage: 1.2 hours | Without phage: 8.5 hours
 ```
-
-### Google Colab (Zero Setup)
-
-Try Illucidate instantly in your browser:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jaegertros/illucidate/blob/main/notebooks/01_quickstart_colab.ipynb)
 
 ---
 
-## Features
+## Features (Planned)
 
 ### 🔧 Modular Design
 - **Standalone components** - Use just the feature generator, just the statistical tests, or the full pipeline
@@ -108,11 +155,10 @@ Try Illucidate instantly in your browser:
 - Ranked by discriminative power
 
 ### 🔌 Multiple Plate Reader Support
-- Victor Nivo (Perkin Elmer)
-- BioTek Synergy
-- Tecan Spark/Infinite
-- Generic CSV/Excel formats
-- *Add your own adapter in ~50 lines of Python*
+- Victor Nivo (Perkin Elmer) - *in development*
+- BioTek Synergy - *planned*
+- Tecan Spark/Infinite - *planned*
+- Generic CSV/Excel formats - *planned*
 
 ### 📈 Rich Visualizations
 - Growth curve overlays (colored by experimental variables)
@@ -145,39 +191,44 @@ Try Illucidate instantly in your browser:
 
 ## Documentation
 
-- [**Getting Started Guide**](docs/GETTING_STARTED.md) - Installation and first analysis
-- [**Citation Guidelines**](docs/CITATION.md) - How to cite & attribute data
-- [**Contributing**](docs/CONTRIBUTING.md) - How to add adapters, features, or improvements
+**Coming Soon:**
+- Getting Started Guide
+- Citation Guidelines
+- Contributing Guide
+- API Reference
+
+For now, watch this repo or open an issue with questions!
 
 ---
 
-## Example Results
+## Example Results (Preliminary)
 
-### Time-to-Detection Improvement
+*Based on initial proof-of-concept work:*
 
-| Measurement | Traditional Detection | Illucidate Signal | Improvement |
-|-------------|----------------------|------------------|-------------|
-| OD600 alone | 6.2 hours | - | - |
-| RLU alone | 4.8 hours | - | - |
-| **OD600/RLU ratio** | - | **1.3 hours** | **79% faster** |
+| Measurement | Traditional Detection | Multivariate Signal | Improvement |
+|-------------|----------------------|---------------------|-------------|
+| OD600 alone | ~6 hours | - | - |
+| RLU alone | ~5 hours | - | - |
+| **OD600/RLU patterns** | - | **~1-2 hours** | **70-80% faster** |
+
+*Full validation in progress.*
 
 ---
 
 ## Citation
 
-If you use Illucidate in your research, please cite:
+If you use or reference Illucidate in your work, please cite:
 
 ```bibtex
-@software{illucidate2024,
+@software{illucidate2025,
   title = {Illucidate: Illuminating early signals in bacterial detection},
   author = {Waddell, Caleb L.},
-  year = {2024},
+  year = {2025},
   url = {https://github.com/jaegertros/illucidate},
-  version = {0.1.0}
+  version = {0.1.0-alpha},
+  note = {Work in progress}
 }
 ```
-
-**And cite the original data sources!** See [CITATION.md](docs/CITATION.md) for details.
 
 ---
 
@@ -195,11 +246,12 @@ Illucidate is released under the [MIT License](LICENSE).
 
 ## Contributing
 
-We welcome contributions! See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for:
-- Adding new plate reader adapters
-- Implementing additional features
-- Improving documentation
-- Reporting bugs
+This project is in active development! Contributions, ideas, and feedback are welcome:
+
+- 🐛 **Found a bug?** Open an [issue](https://github.com/jaegertros/illucidate/issues)
+- 💡 **Have an idea?** Start a [discussion](https://github.com/jaegertros/illucidate/discussions)
+- 🔧 **Want to contribute code?** Check back soon for contributing guidelines
+- 📊 **Have data to share?** Reach out about collaboration
 
 ---
 
@@ -214,6 +266,8 @@ Built for researchers working on:
 
 **Inspired by the need for faster, more reliable pathogen detection to protect public health.**
 
+Special thanks to the open-source community and researchers who share their data and methods.
+
 ---
 
 ## Contact
@@ -226,4 +280,17 @@ Built for researchers working on:
 
 ---
 
+## Development Timeline
+
+**February 2026** - Initial public repository and documentation  
+**Spring 2026** - Core adapter implementation and thesis completion  
+**Summer 2026** - Beta release with validated examples  
+**Fall 2026** - Community testing and expanded documentation
+
+*Timeline subject to change based on research priorities and validation requirements.*
+
+---
+
 **Illucidate** - Because earlier detection saves lives. 💡
+
+*Watch this space. More coming soon.*
